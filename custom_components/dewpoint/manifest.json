@@ -1,0 +1,7 @@
+{
+    "domain": "dewpoint",
+    "name": "Dew Point",
+    "documentation": "https://github.com/alf-scotland/ha-dewpoint.git",
+    "codeowners": [],
+    "iot_class": "local_polling"
+  }
