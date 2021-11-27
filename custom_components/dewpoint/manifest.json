@@ -1,8 +1,11 @@
 {
-    "domain": "dewpoint",
-    "name": "Dew Point",
-    "documentation": "https://github.com/alf-scotland/ha-dewpoint.git",
-    "codeowners": [],
-    "iot_class": "local_polling",
-    "version": "0.0.1"
-  }
+  "domain": "dewpoint",
+  "name": "Dew Point Sensor",
+  "documentation": "https://github.com/alf-scotland/ha-dewpoint.git",
+  "issue_tracker": "https://github.com/alf-scotland/ha-dewpoint/issues",
+  "codeowners": [
+    "@alf-scotland"
+  ],
+  "iot_class": "calculated",
+  "version": "0.0.1"
+}

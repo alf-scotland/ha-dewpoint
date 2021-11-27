@@ -1,0 +1,6 @@
+{
+    "name": "Dew Point Sensor",
+    "domains": [
+        "sensor"
+    ]
+}

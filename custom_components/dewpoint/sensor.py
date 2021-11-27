@@ -120,18 +120,14 @@ class DewPoint(SensorEntity):
 
             schedule_update = (
                 False
-                if not self._update_sensor(
-                    self._humidity_sensor, None, humidity
-                )
+                if not self._update_sensor(self._humidity_sensor, None, humidity)
                 else schedule_update
             )
 
             if schedule_update:
                 self.async_schedule_update_ha_state(True)
 
-        self.hass.bus.async_listen_once(
-            EVENT_HOMEASSISTANT_START, dew_point_startup
-        )
+        self.hass.bus.async_listen_once(EVENT_HOMEASSISTANT_START, dew_point_startup)
 
     def _update_sensor(self, entity, old_state, new_state):
         """Update information based on new sensor states."""
@@ -260,16 +256,14 @@ class DewPoint(SensorEntity):
                 * (alpha + math.log(self._humidity / 100.0))
                 / (beta - math.log(self._humidity / 100.0))
             )
-        
+
         dew_point = round(dew_point, 1)
         self._state = (
-            dew_point 
-            if self._is_metric 
+            dew_point
+            if self._is_metric
             else util.temperature.celsius_to_fahrenheit(dew_point)
         )
-        _LOGGER.debug(
-            "Dew point: %f %s", self._state, self.native_unit_of_measurement
-        )
+        _LOGGER.debug("Dew point: %f %s", self._state, self.native_unit_of_measurement)
 
     @property
     def should_poll(self):
