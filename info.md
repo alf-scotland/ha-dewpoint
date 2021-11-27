@@ -6,7 +6,7 @@ humidity. It is adapted from Home Assistant's
 [Mold Indicator](https://www.home-assistant.io/integrations/mold_indicator/)
 sensor allowing to use dew points without the need of external references.
 
-## Configuration
+## Example
 
 To use the Dew Point sensor in your installation, add the following to your
 `configuration.yaml` file:
